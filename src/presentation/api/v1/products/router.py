@@ -54,7 +54,7 @@ async def update_product(
         raise NotFoundExc("Product not found")
 
 
-@router.delete("/{product_id}", description="Delete product by id")
+@router.delete("/{product_id}", description="Delete product by id", status_code=204)
 async def delete_product(product_id: int, _=Depends(authorization_admin)):
     product_service = ProductService(uow=SqlAlchemyProductUnitOfWork())
     try:
