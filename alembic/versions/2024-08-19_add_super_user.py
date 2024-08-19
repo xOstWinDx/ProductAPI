@@ -43,7 +43,6 @@ def upgrade() -> None:
         ),
         [
             {
-                'id': 1,  # Ensure the id is unique and does not conflict with existing ids
                 'hashed_password': hashed_password,
                 'email': superuser_email,
                 'name': superuser_name,
